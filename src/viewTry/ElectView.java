@@ -53,14 +53,48 @@ public class ElectView extends JFrame {
 		setContentPane(mainJp);
 		mainJp.setLayout(null);
 		
+		/*玩家头像。默认为灰色。轮到该玩家进行竞价的时候头像变亮。*/
+		JLabel player1 = new JLabel("");
+		player1.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Ico0.png"));
+		player1.setBounds(295, 96, 204, 249);
+		mainJp.add(player1);
+		
+		JLabel player2 = new JLabel("");
+		player2.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player2Ico0.png"));
+		player2.setBounds(1012, 96, 204, 249);
+		mainJp.add(player2);
+		
+		JLabel player3 = new JLabel("");
+		player3.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player3Ico0.png"));
+		player3.setBounds(295, 347, 204, 249);
+		mainJp.add(player3);
+		
+		JLabel player4 = new JLabel("");
+		player4.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player4Ico0.png"));
+		player4.setBounds(1012, 347, 204, 249);
+		mainJp.add(player4);
+		
+		/*目前出价最高的玩家名*/
+		JLabel curPlayer = new JLabel("");
+		curPlayer.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Name.PNG"));
+		curPlayer.setBounds(900, 452, 85, 30);
+		mainJp.add(curPlayer);
+		
+		/*目前最高价*/	
+		JLabel curPrice = new JLabel("");
+		curPrice.setBounds(720, 452, 80, 29);
+		mainJp.add(curPrice);
+		
+		/*显示竞价结果的弹窗。默认不可见。竞价结束后可见。*/
 		JPanel resultPn = new JPanel();
 		resultPn.setBorder(new EmptyBorder(0, 0, 0, 0));
 		resultPn.setBounds(514, 0, 479, 700);
 		mainJp.add(resultPn);
 		resultPn.setLayout(null);
 		/*竞价结束后，此弹窗可见*/
-		//resultPn.setVisible(false);
+		resultPn.setVisible(false);
 		
+		/*前进按钮。点击可跳转到BossView(海港负责人界面)。*/
 		JLabel nextPage = new JLabel("");
 		nextPage.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\next2.png"));
 		nextPage.setBounds(416, 450, 48, 54);
@@ -100,16 +134,19 @@ public class ElectView extends JFrame {
 			
 		});
 		
+		/*海港负责人的头像。根据竞价结果改变*/
 		JLabel boss = new JLabel("");
 		boss.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Ico1.png"));
 		boss.setBounds(130, 141, 204, 150);
 		resultPn.add(boss);
 		
+		/*海港负责人的名字。根据竞价结果改变*/
 		JLabel bossLb = new JLabel("");
 		bossLb.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Name.PNG"));
 		bossLb.setBounds(96, 303, 80, 50);
 		resultPn.add(bossLb);
 		
+		/*决定是否购买股份的下拉框*/
 		JComboBox bossBuyCombo = new JComboBox();
 		bossBuyCombo.setBackground(SystemColor.info);
 		bossBuyCombo.setBounds(180, 406, 106, 27);
@@ -120,7 +157,7 @@ public class ElectView extends JFrame {
 		bossBuyCombo.addItem("买人参");
 		resultPn.add(bossBuyCombo);
 		
-		
+		/*结果框背景*/
 		JLabel resultBg = new JLabel("");
 		resultBg.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\resultPn.png"));
 		resultBg.setBounds(19, 0, 445, 521);
@@ -130,15 +167,25 @@ public class ElectView extends JFrame {
 		resultPnBg.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\rerultJpBg.png"));
 		resultPnBg.setBounds(0, 0, 479, 700);
 		resultPn.add(resultPnBg);
-		/*点击竞价按钮后，此弹窗可见*/
-		/*如果金额不够，此标签可见*/
 		
+		/*显示竞价的弹窗。默认不可见。点击竞价按钮后可见。*/		
 		JPanel electPn = new JPanel();
 		electPn.setBounds(514, 119, 480, 314);
 		mainJp.add(electPn);
 		electPn.setLayout(null);
 		electPn.setVisible(false);
 		
+		/*显示玩家目前金钱*/
+		JLabel moneyLb = new JLabel("");
+		moneyLb.setBounds(281, 86, 96, 34);
+		electPn.add(moneyLb);
+		
+		/*显示玩家最高竞价*/
+		JLabel maxLb = new JLabel("");
+		maxLb.setBounds(281, 129, 96, 34);
+		electPn.add(maxLb);
+		
+		/*关闭竞价框的按钮事件*/
 		JLabel closeBtn = new JLabel("");
 		closeBtn.setBounds(435, 0, 45, 45);
 		closeBtn.addMouseListener(new MouseListener() {
@@ -176,22 +223,26 @@ public class ElectView extends JFrame {
 		});
 		electPn.add(closeBtn);
 		
-		JLabel electOk = new JLabel("");
-		electOk.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\nextBtn1.png"));
-		electOk.setBounds(327, 220, 24, 24);
-		electPn.add(electOk);
-		
+		/*输入框。用于输入加价。*/
 		electMoney = new JTextField();
 		electMoney.setBounds(179, 217, 127, 27);
 		electPn.add(electMoney);
 		electMoney.setColumns(10);
 		
+		/*输入框右侧的确定按钮*/
+		JLabel electOk = new JLabel("");
+		electOk.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\nextBtn1.png"));
+		electOk.setBounds(327, 220, 24, 24);
+		electPn.add(electOk);
+		
+		/*默认不可见。如果金额不够变得可见。*/
 		JLabel poorLb = new JLabel("");
 		poorLb.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\poorLb.png"));
 		poorLb.setBounds(212, 265, 81, 21);
 		electPn.add(poorLb);
-		//poorLb.setVisible(false);
+		poorLb.setVisible(false);
 		
+		/*竞选框背景*/
 		JLabel electBg = new JLabel("");
 		electBg.setBounds(15, 0, 473, 323);
 		electBg.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\electPn.png"));
@@ -202,26 +253,7 @@ public class ElectView extends JFrame {
 		electPnBg.setBounds(0, 0, 480, 314);
 		electPn.add(electPnBg);
 		
-		JLabel player1 = new JLabel("");
-		player1.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Ico0.png"));
-		player1.setBounds(295, 96, 204, 249);
-		mainJp.add(player1);
-		
-		JLabel player2 = new JLabel("");
-		player2.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player2Ico0.png"));
-		player2.setBounds(1012, 96, 204, 249);
-		mainJp.add(player2);
-		
-		JLabel player3 = new JLabel("");
-		player3.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player3Ico0.png"));
-		player3.setBounds(295, 347, 204, 249);
-		mainJp.add(player3);
-		
-		JLabel player4 = new JLabel("");
-		player4.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player4Ico0.png"));
-		player4.setBounds(1012, 347, 204, 249);
-		mainJp.add(player4);
-		
+		/*竞选按钮点击事件*/		
 		JLabel electBtn = new JLabel("");
 		electBtn.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\electBtn.png"));
 		electBtn.setBounds(559, 347, 152, 77);
@@ -260,11 +292,13 @@ public class ElectView extends JFrame {
 		});
 		mainJp.add(electBtn);
 		
+		/*放弃按钮*/
 		JLabel abandonBtn = new JLabel("");
 		abandonBtn.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\abandonBtn.png"));
 		abandonBtn.setBounds(776, 347, 152, 77);
 		mainJp.add(abandonBtn);
 		
+		/*竞选界面背景*/
 		JLabel bgLb = new JLabel("");
 		bgLb.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\electBg.png"));
 		bgLb.setBounds(0, 0, 1493, 700);

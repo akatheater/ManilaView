@@ -47,6 +47,7 @@ public class BossView extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		/*选择装载货物的下拉框*/
 		JComboBox boat1Combo = new JComboBox();
 		boat1Combo.setBackground(SystemColor.info);
 		boat1Combo.setBounds(419, 462, 136, 35);
@@ -74,6 +75,7 @@ public class BossView extends JFrame {
 		boat3Combo.addItem("人参");
 		contentPane.add(boat3Combo);
 		
+		/*前往MainView（主页面）的按钮*/
 		JLabel next = new JLabel("");
 		next.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\next2.png"));
 		next.setBounds(1202, 546, 48, 65);
