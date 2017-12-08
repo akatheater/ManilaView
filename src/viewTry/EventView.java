@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 
 public class EventView extends JFrame {
 
@@ -41,6 +42,162 @@ public class EventView extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JPanel event6 = new JPanel();
+		event6.setBounds(0, 0, 1493, 700);
+		contentPane.add(event6);
+		event6.setLayout(null);
+		
+		JLabel movePlayer = new JLabel("");
+		movePlayer.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Name.PNG"));
+		movePlayer.setBounds(655, 174, 80, 50);
+		event6.add(movePlayer);
+		
+		JComboBox moveBoat1 = new JComboBox();
+		moveBoat1.setBounds(820, 280, 100, 27);
+		event6.add(moveBoat1);
+		moveBoat1.addItem("不移动");
+		moveBoat1.addItem("向前移动1");
+		moveBoat1.addItem("向前移动2");
+		moveBoat1.addItem("向后移动1");
+		moveBoat1.addItem("向后移动2");
+		
+		JComboBox moveBoat2 = new JComboBox();
+		moveBoat2.setBounds(820, 346, 100, 27);
+		event6.add(moveBoat2);
+		moveBoat2.addItem("不移动");
+		moveBoat2.addItem("向前移动1");
+		moveBoat2.addItem("向前移动2");
+		moveBoat2.addItem("向后移动1");
+		moveBoat2.addItem("向后移动2");
+		
+		JComboBox moveBoat3 = new JComboBox();
+		moveBoat3.setBounds(820, 416, 100, 27);
+		event6.add(moveBoat3);
+		moveBoat3.addItem("不移动");
+		moveBoat3.addItem("向前移动1");
+		moveBoat3.addItem("向前移动2");
+		moveBoat3.addItem("向后移动1");
+		moveBoat3.addItem("向后移动2");
+		
+		JLabel nextBtn6 = new JLabel("");
+		nextBtn6.setBounds(951, 551, 46, 42);
+		event6.add(nextBtn6);
+		
+		JLabel bg6 = new JLabel("");
+		bg6.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\event6.png"));
+		bg6.setBounds(0, 0, 1493, 700);
+		event6.add(bg6);
+		
+		JPanel event5 = new JPanel();
+		event5.setBounds(0, 0, 1493, 700);
+		contentPane.add(event5);
+		event5.setLayout(null);
+		
+		JLabel robPlayer = new JLabel("");
+		robPlayer.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Name.PNG"));
+		robPlayer.setBounds(658, 150, 80, 50);
+		event5.add(robPlayer);
+		
+		JLabel robBoat1 = new JLabel("");
+		robBoat1.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\robBoat1.png"));
+		robBoat1.setBounds(592, 198, 375, 76);
+		event5.add(robBoat1);
+		
+		JLabel robBoat2 = new JLabel("");
+		robBoat2.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\robBoat2.png"));
+		robBoat2.setBounds(592, 263, 375, 76);
+		event5.add(robBoat2);
+		
+		JLabel robBoat3 = new JLabel("");
+		robBoat3.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\robBoat3.png"));
+		robBoat3.setBounds(592, 328, 375, 76);
+		event5.add(robBoat3);
+		
+		JLabel stop1 = new JLabel("");
+		stop1.setBounds(678, 463, 81, 31);
+		event5.add(stop1);
+		
+		JLabel stop2 = new JLabel("");
+		stop2.setBounds(806, 466, 81, 26);
+		event5.add(stop2);
+		
+		JLabel stop3 = new JLabel("");
+		stop3.setBounds(674, 503, 81, 28);
+		event5.add(stop3);
+		
+		JLabel stop4 = new JLabel("");
+		stop4.setBounds(808, 501, 81, 32);
+		event5.add(stop4);
+		
+		JLabel stopBg = new JLabel("");
+		stopBg.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\stopBg.png"));
+		stopBg.setBounds(626, 405, 315, 141);
+		event5.add(stopBg);
+		
+		JLabel nextBtn5 = new JLabel("");
+		nextBtn5.setBounds(951, 551, 46, 42);
+		event5.add(nextBtn5);
+		
+		JLabel bg5 = new JLabel("");
+		bg5.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\event5.png"));
+		bg5.setBounds(0, 0, 1493, 700);
+		event5.add(bg5);
+		
+		JPanel event4 = new JPanel();
+		event4.setBounds(0, 0, 1493, 700);
+		contentPane.add(event4);
+		event4.setLayout(null);
+		
+		JLabel onPlayer = new JLabel("");
+		onPlayer.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\player1Name.PNG"));
+		onPlayer.setBounds(667, 150, 80, 50);
+		event4.add(onPlayer);
+		
+		JLabel onBoat1 = new JLabel("");
+		onBoat1.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\onBoat1.png"));
+		onBoat1.setBounds(592, 198, 389, 85);
+		event4.add(onBoat1);
+		
+		JLabel onBoat2 = new JLabel("");
+		onBoat2.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\onBoat2.png"));
+		onBoat2.setBounds(592, 263, 389, 85);
+		event4.add(onBoat2);
+		
+		JLabel onBoat3 = new JLabel("");
+		onBoat3.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\onBoat3.png"));
+		onBoat3.setBounds(592, 328, 389, 85);
+		event4.add(onBoat3);
+		
+		JLabel drive1 = new JLabel("");
+		drive1.setBounds(682, 462, 91, 39);
+		event4.add(drive1);
+		
+		JLabel drive2 = new JLabel("");
+		drive2.setBounds(798, 464, 85, 39);
+		event4.add(drive2);
+		
+		JLabel drive3 = new JLabel("");
+		drive3.setBounds(688, 514, 77, 29);
+		event4.add(drive3);
+		
+		JLabel drive4 = new JLabel("");
+		drive4.setBounds(804, 510, 76, 28);
+		event4.add(drive4);
+		
+		JLabel driveBg = new JLabel("");
+		driveBg.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\drive.png"));
+		driveBg.setBounds(640, 422, 297, 127);
+		event4.add(driveBg);
+		
+		JLabel nextBtn4 = new JLabel("");
+		nextBtn4.setBounds(951, 551, 46, 42);
+		event4.add(nextBtn4);
+		
+		JLabel bg4 = new JLabel("");
+		bg4.setBounds(0, 0, 1493, 700);
+		bg4.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\event4.png"));
+		event4.add(bg4);
+		
 		JPanel event3 = new JPanel();
 		event3.setBounds(0, 0, 1493, 700);
 		contentPane.add(event3);
@@ -50,6 +207,10 @@ public class EventView extends JFrame {
 		destroyBoat.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\boat1Name.PNG"));
 		destroyBoat.setBounds(687, 458, 200, 50);
 		event3.add(destroyBoat);
+		
+		JLabel nextBtn3 = new JLabel("");
+		nextBtn3.setBounds(951, 551, 46, 42);
+		event3.add(nextBtn3);
 		
 		JLabel bg3 = new JLabel("");
 		bg3.setIcon(new ImageIcon("D:\\eclipse\\eclipse-workspace\\ManilaView\\images\\event3.png"));
